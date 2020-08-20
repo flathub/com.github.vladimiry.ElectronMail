@@ -5,6 +5,7 @@
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "19.08",
   "sdk": "org.freedesktop.Sdk",
+  "branch": "beta",
   "separate-locales": false,
   "command": "electron-mail",
   "rename-desktop-file": "electron-mail.desktop",
@@ -60,14 +61,14 @@
         {
           "type": "file",
           "dest-filename": "electron-mail.snap",
-          "url": "https://github.com/vladimiry/ElectronMail/releases/download/v4.8.0/electron-mail-4.8.0-linux-amd64.snap",
-          "sha256": "52c12762503dcab3fc46818583823038888c27a890756822fa466134ea5f99dd"
+          "url": "https://github.com/vladimiry-playground/electron-mail-ftatpak/releases/download/v4.8.1-b09de1b/electron-mail-4.8.1-linux-amd64.snap",
+          "sha256": "cde92a8b2a427a05ea4bc4be7d8987cd58196aa070045d7a92841487690b5b7b"
         },
         {
           "type": "file",
           "dest-filename": "electron-mail.deb",
-          "url": "https://github.com/vladimiry/ElectronMail/releases/download/v4.8.0/electron-mail-4.8.0-linux-amd64.deb",
-          "sha256": "296e3224cb3c54ac9fb1a67bd36b181a9194302768721b6f3188ab84a5cc17f6"
+          "url": "https://github.com/vladimiry-playground/electron-mail-ftatpak/releases/download/v4.8.1-b09de1b/electron-mail-4.8.1-linux-amd64.deb",
+          "sha256": "403782c2acd5939586cb5a7b1e1d900f88678453c74f9e9f8fafd323674bc526"
         },
         {
           "type": "script",
