@@ -61,14 +61,14 @@
         {
           "type": "file",
           "dest-filename": "electron-mail.snap",
-          "url": "https://github.com/vladimiry-playground/electron-mail-ftatpak/releases/download/v4.8.1-b09de1b/electron-mail-4.8.1-linux-amd64.snap",
-          "sha256": "cde92a8b2a427a05ea4bc4be7d8987cd58196aa070045d7a92841487690b5b7b"
+          "url": "https://github.com/vladimiry-playground/electron-mail-ftatpak/releases/download/4.8.1-debug/electron-mail-4.8.1-debug-linux-amd64.snap",
+          "sha256": "89e019e3afafac3dd7b1d3d73f6e6cb1fce928055daf82b019cfb733cb7d97fa"
         },
         {
           "type": "file",
           "dest-filename": "electron-mail.deb",
-          "url": "https://github.com/vladimiry-playground/electron-mail-ftatpak/releases/download/v4.8.1-b09de1b/electron-mail-4.8.1-linux-amd64.deb",
-          "sha256": "403782c2acd5939586cb5a7b1e1d900f88678453c74f9e9f8fafd323674bc526"
+          "url": "https://github.com/vladimiry-playground/electron-mail-ftatpak/releases/download/4.8.1-debug/electron-mail-4.8.1-debug-linux-amd64.deb",
+          "sha256": "cc38ad3e2ca70112761a10daf179b5e59666321acdacbaf9bfaa928e943de6d6"
         },
         {
           "type": "script",
