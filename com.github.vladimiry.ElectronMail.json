@@ -34,7 +34,7 @@
         {
           "type": "git",
           "url": "https://github.com/plougher/squashfs-tools.git",
-          "commit": "c570c6188811088b12ffdd9665487a2960c997a0"
+          "commit": "e595864642cd6fdaa22ef24a81b8fc26ffc00845"
         }
       ]
     },
@@ -57,14 +57,14 @@
         {
           "type": "file",
           "dest-filename": "electron-mail.snap",
-          "url": "https://github.com/vladimiry/ElectronMail/releases/download/v4.9.0/electron-mail-4.9.0-linux-amd64.snap",
-          "sha256": "1c2aea808a67d90238d2e8143f10b0177fb3eadfb936ca820ec6ef71aedb5d3b"
+          "url": "https://github.com/vladimiry/ElectronMail/releases/download/v4.10.0/electron-mail-4.10.0-linux-amd64.snap",
+          "sha256": "d61fd5c780e60c8188c74e2d9b75ba452c7f6163f3cb43922f904857449d7949"
         },
         {
           "type": "file",
           "dest-filename": "electron-mail.deb",
-          "url": "https://github.com/vladimiry/ElectronMail/releases/download/v4.9.0/electron-mail-4.9.0-linux-amd64.deb",
-          "sha256": "55ea41ee503950427338c6a0c3e524a924e48ddbaa75db28576c595a2f5d49fe"
+          "url": "https://github.com/vladimiry/ElectronMail/releases/download/v4.10.0/electron-mail-4.10.0-linux-amd64.deb",
+          "sha256": "f631bda0d7c597a188627b832f6f35d6dc342f5e88784ed0cdf2c2d999a29143"
         },
         {
           "type": "script",
