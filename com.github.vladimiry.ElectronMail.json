@@ -56,14 +56,14 @@
         {
           "type": "file",
           "dest-filename": "electron-mail.snap",
-          "url": "https://github.com/vladimiry/ElectronMail/releases/download/v4.9.2/electron-mail-4.9.2-linux-amd64.snap",
-          "sha256": "8f2f672ca80ba90419d254d6a614799ea009c2c74b865c2745e251a0a8c096dc"
+          "url": "https://github.com/vladimiry/ElectronMail/releases/download/v4.10.0/electron-mail-4.10.0-linux-amd64.snap",
+          "sha256": "d61fd5c780e60c8188c74e2d9b75ba452c7f6163f3cb43922f904857449d7949"
         },
         {
           "type": "file",
           "dest-filename": "electron-mail.deb",
-          "url": "https://github.com/vladimiry/ElectronMail/releases/download/v4.9.2/electron-mail-4.9.2-linux-amd64.deb",
-          "sha256": "603846a13ff76cf345f5295a73afb826731f8f1abbbeac81d2e7b8f02de22004"
+          "url": "https://github.com/vladimiry/ElectronMail/releases/download/v4.10.0/electron-mail-4.10.0-linux-amd64.deb",
+          "sha256": "f631bda0d7c597a188627b832f6f35d6dc342f5e88784ed0cdf2c2d999a29143"
         },
         {
           "type": "script",
