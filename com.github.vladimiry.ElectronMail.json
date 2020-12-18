@@ -33,7 +33,7 @@
         {
           "type": "git",
           "url": "https://github.com/plougher/squashfs-tools.git",
-          "commit": "c570c6188811088b12ffdd9665487a2960c997a0"
+          "commit": "e595864642cd6fdaa22ef24a81b8fc26ffc00845"
         }
       ]
     },
