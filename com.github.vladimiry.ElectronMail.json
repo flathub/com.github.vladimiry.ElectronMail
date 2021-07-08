@@ -61,6 +61,16 @@
       ]
     },
     {
+      "name": "zypak",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/refi64/zypak",
+          "commit": "89dd114427a114028f249ed9b2824d083f459eb5"
+        }
+      ]
+    },
+    {
       "name": "electron-mail",
       "buildsystem": "simple",
       "build-commands": [
