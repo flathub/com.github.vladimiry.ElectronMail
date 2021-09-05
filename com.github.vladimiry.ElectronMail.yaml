@@ -19,7 +19,13 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.kde.StatusNotifierWatcher
+  # gtk-cups-backend
+  - --env=GTK_PATH=/app/lib/gtkmodules
+  - --socket=cups
+  - --system-talk-name=org.freedesktop.Avahi
 modules:
+  - module-gtk-cups-backend.yml
+  - module-gtk-settings.yaml
   - name: libsecret
     buildsystem: meson
     config-opts:
