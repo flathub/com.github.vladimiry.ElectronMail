@@ -1,0 +1,32 @@
+app-id: com.github.vladimiry.ElectronMail
+base: org.electronjs.Electron2.BaseApp
+base-version: '20.08'
+runtime: org.freedesktop.Platform
+runtime-version: '20.08'
+sdk: org.freedesktop.Sdk
+separate-locales: false
+command: electron-mail
+rename-desktop-file: electron-mail.desktop
+rename-icon: electron-mail
+finish-args:
+  - --device=dri
+  - --env=HUNSPELL_DICTIONARIES=/app/ElectronMail/usr/share/hunspell/
+  - --filesystem=xdg-download
+  - --share=ipc
+  - --share=network
+  - --socket=pulseaudio
+  - --socket=x11
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.freedesktop.secrets
+  - --talk-name=org.kde.StatusNotifierWatcher
+  # gtk-cups-backend
+  - --env=GTK_PATH=/app/lib/gtkmodules
+  - --socket=cups
+  - --system-talk-name=org.freedesktop.Avahi
+modules:
+  - module-gtk-cups-backend.yml
+  - module-gtk-settings.yaml
+  - module-libsecret.yaml
+  - module-squashfs.yaml
+  - module-zypak.yaml
+  - module-electron-mail.yaml
