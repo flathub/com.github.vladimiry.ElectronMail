@@ -1,0 +1,29 @@
+name: electron-mail
+buildsystem: simple
+build-commands:
+  - unsquashfs -dest /app/ElectronMail/ electron-mail.snap -e usr/share/hunspell/
+  - rm electron-mail.snap
+  - ar xo electron-mail.deb
+  - tar xf data.tar.xz -C /app --strip-components=2 ./opt ./usr
+  - rm -f control.tar.gz data.tar.xz debian-binary electron-mail.deb
+  - rm -rf /app/share/icons/hicolor/1024x1024/
+  - install -Dm755 electron-mail-entrypoint.sh /app/bin/electron-mail
+  - chmod -R a-s,go+rX,go-w /app/ElectronMail
+  - desktop-file-edit --set-key=Exec --set-value='/app/bin/electron-mail --js-flags="--max-old-space-size=6144" %U' /app/share/applications/electron-mail.desktop
+  - install -Dm644 -t /app/share/metainfo ${FLATPAK_ID}.metainfo.xml
+sources:
+  - type: file
+    dest-filename: electron-mail.snap
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v4.12.5/electron-mail-4.12.5-linux-amd64.snap
+    sha256: e9d9e23824f8d00c4c138316175dbb31586f95ace18cdc83417e0f8d08f02c2e
+  - type: file
+    dest-filename: electron-mail.deb
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v4.12.5/electron-mail-4.12.5-linux-amd64.deb
+    sha256: 7441336157bf7283e99c0561bcdf63bc17dbef4fc193ffbdc37600477acc3ac6
+  - type: script
+    dest-filename: electron-mail-entrypoint.sh
+    commands:
+      - 'export TMPDIR="$XDG_RUNTIME_DIR/app/${FLATPAK_ID}"'
+      - exec zypak-wrapper /app/ElectronMail/electron-mail "$@"
+  - type: file
+    path: com.github.vladimiry.ElectronMail.metainfo.xml

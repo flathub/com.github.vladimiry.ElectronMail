@@ -1,0 +1,5 @@
+name: zypak
+sources:
+  - type: git
+    url: https://github.com/refi64/zypak
+    commit: e09f37ca4ff09827434deba11f9b1f9e1c42dbaf
