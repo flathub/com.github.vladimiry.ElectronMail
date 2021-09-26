@@ -1,9 +1,9 @@
 app-id: com.github.vladimiry.ElectronMail
 branch: beta
 base: org.electronjs.Electron2.BaseApp
-base-version: '20.08'
+base-version: '21.08'
 runtime: org.freedesktop.Platform
-runtime-version: '20.08'
+runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 command: electron-mail
@@ -11,19 +11,30 @@ rename-desktop-file: electron-mail.desktop
 rename-icon: electron-mail
 finish-args:
   - --device=dri
-  - --env=HUNSPELL_DICTIONARIES=/app/ElectronMail/usr/share/hunspell/
   - --filesystem=xdg-download
   - --share=ipc
   - --share=network
   - --socket=pulseaudio
   - --socket=x11
-  - --talk-name=org.freedesktop.Notifications
+  # required by the "keep me signed in" feature
+  # see https://github.com/vladimiry/ElectronMail/blob/a154bb61c86d890b77c9d547683163ce4722c64f/images/keep-me-signed-in.png
+  # the "--filesystem=xdg-run/keyring" is added for the persistent logins support
   - --talk-name=org.freedesktop.secrets
+  - --filesystem=xdg-run/keyring
+  # required for notifications in various desktop environments
+  # the "--own-name=org.kde.StatusNotifierItem-2-1" is added for KDE's special way of handling notifications
+  - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
+  - --own-name=org.kde.StatusNotifierItem-2-1
+  # required for advanced input methods e.g. writing CJK languages
+  - --talk-name=org.freedesktop.portal.Fcitx
   # gtk-cups-backend
   - --env=GTK_PATH=/app/lib/gtkmodules
   - --socket=cups
   - --system-talk-name=org.freedesktop.Avahi
+  # required for the dictionary folder location detection by the app's spellcheck functionality implemented using https://github.com/atom/node-spellchecker
+  # see https://github.com/vladimiry/ElectronMail/blob/d9a6dfc4bc984dcadd78492f1a3eb665d9e5b1e6/src/electron-main/spell-check/setup.ts#L55
+  - --env=HUNSPELL_DICTIONARIES=/app/ElectronMail/usr/share/hunspell/
 modules:
   - module-gtk-cups-backend.yml
   - module-gtk-settings.yaml

@@ -14,16 +14,16 @@ build-commands:
 sources:
   - type: file
     dest-filename: electron-mail.snap
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v4.12.6/electron-mail-4.12.6-linux-amd64.snap
-    sha256: f67a6555ed66770674de77dfff145e58aebbef3a5946e68933aff16051b544e0
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v4.12.8/electron-mail-4.12.8-linux-amd64.snap
+    sha256: b34cdffe62239f2fef931799dba04ba403c6c8c7273fedc94a9f950e0295a566
   - type: file
     dest-filename: electron-mail.deb
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v4.12.6/electron-mail-4.12.6-linux-amd64.deb
-    sha256: 5d765a9f9e725c8f36d11a0006ee4d58cb5c298ccf8f3cff9dba0972fe02110d
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v4.12.8/electron-mail-4.12.8-linux-amd64.deb
+    sha256: b35d4f3633b3c06501c8bf554723fc6ac4aab6863b808ff4fe2d3779b14a7cdd
   - type: script
     dest-filename: electron-mail-entrypoint.sh
     commands:
-      - 'export TMPDIR="$XDG_RUNTIME_DIR/app/${FLATPAK_ID}"'
+      - export TMPDIR="$XDG_RUNTIME_DIR/app/${FLATPAK_ID}"
       - exec zypak-wrapper /app/ElectronMail/electron-mail "$@"
   - type: file
     path: com.github.vladimiry.ElectronMail.metainfo.xml
