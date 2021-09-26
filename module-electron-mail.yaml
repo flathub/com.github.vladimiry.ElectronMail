@@ -1,8 +1,6 @@
 name: electron-mail
 buildsystem: simple
 build-commands:
-  - unsquashfs -dest /app/ElectronMail/ electron-mail.snap -e usr/share/hunspell/
-  - rm electron-mail.snap
   - ar xo electron-mail.deb
   - tar xf data.tar.xz -C /app --strip-components=2 ./opt ./usr
   - rm -f control.tar.gz data.tar.xz debian-binary electron-mail.deb
@@ -13,13 +11,9 @@ build-commands:
   - install -Dm644 -t /app/share/metainfo ${FLATPAK_ID}.metainfo.xml
 sources:
   - type: file
-    dest-filename: electron-mail.snap
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v4.12.8/electron-mail-4.12.8-linux-amd64.snap
-    sha256: b34cdffe62239f2fef931799dba04ba403c6c8c7273fedc94a9f950e0295a566
-  - type: file
     dest-filename: electron-mail.deb
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v4.12.8/electron-mail-4.12.8-linux-amd64.deb
-    sha256: b35d4f3633b3c06501c8bf554723fc6ac4aab6863b808ff4fe2d3779b14a7cdd
+    url: https://raw.githubusercontent.com/vladimiry-playground/electron-mail-issue-443/master/electron-mail-4.12.9-linux-amd64.deb
+    sha256: 06f6e5a8e51d296aeaf003d6f09629640421c8d0c6658578785f4db5a42ff929
   - type: script
     dest-filename: electron-mail-entrypoint.sh
     commands:

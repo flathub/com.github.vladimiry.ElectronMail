@@ -32,9 +32,6 @@ finish-args:
   - --env=GTK_PATH=/app/lib/gtkmodules
   - --socket=cups
   - --system-talk-name=org.freedesktop.Avahi
-  # required for the dictionary folder location detection by the app's spellcheck functionality implemented using https://github.com/atom/node-spellchecker
-  # see https://github.com/vladimiry/ElectronMail/blob/d9a6dfc4bc984dcadd78492f1a3eb665d9e5b1e6/src/electron-main/spell-check/setup.ts#L55
-  - --env=HUNSPELL_DICTIONARIES=/app/ElectronMail/usr/share/hunspell/
 modules:
   - module-gtk-cups-backend.yml
   - module-gtk-settings.yaml
