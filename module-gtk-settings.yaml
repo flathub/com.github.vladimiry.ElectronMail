@@ -1,7 +1,7 @@
 name: gtk-settings
 buildsystem: simple
 build-commands:
-  - install -Dm 644 gtk-settings.ini /app/etc/xdg/gtk-3.0/settings.ini
+  - install -Dm 644 module-gtk-settings.ini /app/etc/xdg/gtk-3.0/settings.ini
 sources:
   - type: file
-    path: gtk-settings.ini
+    path: module-gtk-settings.ini
