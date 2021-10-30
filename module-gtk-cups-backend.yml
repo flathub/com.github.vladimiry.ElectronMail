@@ -7,21 +7,8 @@ post-install:
 sources:
   - type: git
     url: https://gitlab.gnome.org/GNOME/gtk.git
-    tag: 3.24.23
+    tag: 3.24.30
   # see https://github.com/flathub/com.google.Chrome/commit/b546b5e6b2fcc4ca60dc99dd093f866d7136ceb4#diff-640c4ff4aeb014e3273279c4262d1ff8681bab60316118025149cbc0d3988e28?hl=en
   # from https://gitlab.gnome.org/GNOME/gnome-build-meta/-/blob/master/files/gtk3-werror.patch
   - type: patch
     path: module-gtk-cups-backend-gtk3-werror.patch
-modules:
-  - name: libcups
-    make-args: [ libs ]
-    no-make-install: true
-    post-install:
-      - make install-headers install-libs
-    cleanup:
-      - /include
-    sources:
-      - type: git
-        url: https://github.com/OpenPrinting/cups.git
-        tag: v2.3.3op2
-        commit: 3b566f73587ffa8ad9690f2399efc4508b3a9016
