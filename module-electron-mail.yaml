@@ -14,12 +14,12 @@ build-commands:
 sources:
   - type: file
     dest-filename: electron-mail.snap
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.0.0/electron-mail-5.0.0-linux-amd64.snap
-    sha256: 2cfa0f4ffff61d2b5ba25c3cf838c26e6e536a4e4d689c6344be1ede9cf7e6aa
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.0.1/electron-mail-5.0.1-linux-amd64.snap
+    sha256: 98530c65d7c890ada8b40d15cca4fec0cbfe620f936335558a823123430994e3
   - type: file
     dest-filename: electron-mail.deb
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.0.0/electron-mail-5.0.0-linux-amd64.deb
-    sha256: e63d49e14ea33074152600e96c47efdaa79edf3e9388946a1edd3ea4008e3df8
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.0.1/electron-mail-5.0.1-linux-amd64.deb
+    sha256: 6997ccc5b22be7679ffa85e2b1f800c9aa75bdda1a88fa46eec72c7fdfbe7220
   - type: script
     dest-filename: electron-mail-entrypoint.sh
     commands:
