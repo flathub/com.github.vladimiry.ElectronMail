@@ -36,5 +36,4 @@ modules:
   - module-gtk-settings.yaml
   - module-libsecret.yaml
   - module-squashfs.yaml
-  - module-zypak.yaml
   - module-electron-mail.yaml
