@@ -1,8 +1,8 @@
 app-id: com.github.vladimiry.ElectronMail
 base: org.electronjs.Electron2.BaseApp
-base-version: '21.08'
+base-version: '22.08'
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 command: electron-mail
@@ -21,10 +21,8 @@ finish-args:
   - --talk-name=org.freedesktop.secrets
   - --filesystem=xdg-run/keyring
   # required for notifications in various desktop environments
-  # the "--own-name=org.kde.StatusNotifierItem-2-1" is added for KDE's special way of handling notifications
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
-  - --own-name=org.kde.StatusNotifierItem-2-1
   # required for advanced input methods e.g. writing CJK languages
   - --talk-name=org.freedesktop.portal.Fcitx
   # gtk-cups-backend
