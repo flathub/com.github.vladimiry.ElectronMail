@@ -23,6 +23,8 @@ finish-args:
   # required for notifications in various desktop environments
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
+  # TODO drop "--own-name=org.kde.*" workaround on https://github.com/flathub/flatpak-builder-lint/issues/66 resolving
+  - --own-name=org.kde.*
   # required for advanced input methods e.g. writing CJK languages
   - --talk-name=org.freedesktop.portal.Fcitx
   # gtk-cups-backend
@@ -32,6 +34,7 @@ finish-args:
 modules:
   - module-gtk-cups-backend.yml
   - module-gtk-settings.yaml
+  - module-libnotify.yaml
   - module-libsecret.yaml
   - module-squashfs.yaml
   - module-electron-mail.yaml
