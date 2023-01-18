@@ -34,7 +34,6 @@ finish-args:
 modules:
   - module-gtk-cups-backend.yml
   - module-gtk-settings.yaml
-  - module-libnotify.yaml
   - module-libsecret.yaml
   - module-squashfs.yaml
   - module-electron-mail.yaml
