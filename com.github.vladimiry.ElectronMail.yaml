@@ -33,5 +33,4 @@ finish-args:
   - --system-talk-name=org.freedesktop.Avahi
 modules:
   - module-libsecret.yaml
-  - module-squashfs.yaml
   - module-electron-mail.yaml
