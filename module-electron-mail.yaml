@@ -12,8 +12,8 @@ build-commands:
 sources:
   - type: file
     dest-filename: electron-mail.deb
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.1.7/electron-mail-5.1.7-linux-amd64.deb
-    sha256: 6ce655b00e44a237e20c98200841f4b80a527edc7427818ca9b213b0ee7f3f2e
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.1.8/electron-mail-5.1.8-linux-amd64.deb
+    sha256: 36d3a99e390fc3e33a275f27ca93e50f1027e04a56bd0d5192f66c80b312075a
   - type: script
     dest-filename: electron-mail-entrypoint.sh
     commands:
