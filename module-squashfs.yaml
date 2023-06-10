@@ -1,8 +1,0 @@
-name: squashfs
-buildsystem: simple
-build-commands:
-  - XZ_SUPPORT=1 make -C squashfs-tools -j ${FLATPAK_BUILDER_N_JOBS} install INSTALL_DIR=${FLATPAK_DEST}/bin
-sources:
-  - type: git
-    url: https://github.com/plougher/squashfs-tools.git
-    commit: 1cd3fe850f006f59b369906dae687fbf1507c4e0
