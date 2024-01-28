@@ -23,8 +23,6 @@ finish-args:
   # required for notifications in various desktop environments
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
-  # required for advanced input methods e.g. writing CJK languages
-  - --talk-name=org.freedesktop.portal.Fcitx
   # gtk-cups-backend
   - --env=GTK_PATH=/app/lib/gtkmodules
   - --socket=cups
