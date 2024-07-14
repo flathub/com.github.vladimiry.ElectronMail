@@ -4,7 +4,7 @@
   <launchable type="desktop-id">com.github.vladimiry.ElectronMail.desktop</launchable>
   <name>ElectronMail</name>
   <developer_name>Vladimir Yakovlev</developer_name>
-  <summary>Unofficial desktop client for ProtonMail</summary>
+  <summary>Unofficial ProtonMail desktop app</summary>
   <project_license>GPL-3.0</project_license>
   <metadata_license>CC0-1.0</metadata_license>
   <url type="homepage">https://github.com/vladimiry/ElectronMail/</url>
@@ -17,7 +17,7 @@
     </p>
   </description>
   <screenshots>
-    <screenshot>
+    <screenshot type="default">
       <image type="source">
         https://user-images.githubusercontent.com/1560781/87737387-7f920100-c7e3-11ea-9807-6887b2f4b6db.png
       </image>
