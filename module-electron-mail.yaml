@@ -7,17 +7,17 @@ build-commands:
   - rm -rf /app/share/icons/hicolor/1024x1024/
   - install -Dm755 electron-mail-entrypoint.sh /app/bin/electron-mail
   - find /app/ElectronMail/ -exec chmod -R a-s,go+rX,go-w {} \;
-  - desktop-file-edit --set-key=Exec --set-value='/app/bin/electron-mail --js-flags="--max-old-space-size=12288" %U' /app/share/applications/electron-mail.desktop
+  - desktop-file-edit --set-key=Exec --set-value='/app/bin/electron-mail --js-flags="--max-old-space-size=12288" %U' /app/share/applications/ElectronMail.desktop
   - install -Dm644 -t /app/share/metainfo ${FLATPAK_ID}.metainfo.xml
 sources:
   - type: file
     dest-filename: electron-mail.deb
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.0/electron-mail-5.3.0-linux-amd64.deb
-    sha256: 87ce5709e8eb97cf63436a54dca64cc5b3182c4ed183acc2380ecdd67819fe11
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.1/electron-mail-5.3.1-linux-amd64.deb
+    sha256: 3ff5b8f630f3b89dc708d5253a6bf3e19ab290da8f939622666167db8514375e
   - type: script
     dest-filename: electron-mail-entrypoint.sh
     commands:
       - export TMPDIR="$XDG_RUNTIME_DIR/app/${FLATPAK_ID}"
-      - exec zypak-wrapper /app/ElectronMail/electron-mail "$@"
+      - exec zypak-wrapper /app/ElectronMail/ElectronMail "$@"
   - type: file
     path: com.github.vladimiry.ElectronMail.metainfo.xml
