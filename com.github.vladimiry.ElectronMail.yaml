@@ -6,8 +6,8 @@ runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 command: electron-mail
-rename-desktop-file: electron-mail.desktop
-rename-icon: electron-mail
+rename-desktop-file: ElectronMail.desktop
+rename-icon: ElectronMail
 finish-args:
   - --device=dri
   - --filesystem=xdg-download
