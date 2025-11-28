@@ -80,4 +80,11 @@
     <release version="4.7.0" date="2020-07-26"/>
     <release version="4.6.0" date="2020-06-16"/>
   </releases>
+  <keywords>
+    <keyword>electronmail</keyword>
+    <keyword>protonmail client</keyword>
+    <keyword>offline email</keyword>
+    <keyword>secure email client</keyword>
+    <keyword>desktop mail app</keyword>
+  </keywords>
 </component>
