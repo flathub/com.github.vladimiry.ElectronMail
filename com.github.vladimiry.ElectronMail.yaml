@@ -14,7 +14,8 @@ finish-args:
   - --share=ipc
   - --share=network
   - --socket=pulseaudio
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   # required by the "keep me signed in" feature
   # see https://github.com/vladimiry/ElectronMail/blob/a154bb61c86d890b77c9d547683163ce4722c64f/images/keep-me-signed-in.png
   # the "--filesystem=xdg-run/keyring" is added for the persistent logins support
