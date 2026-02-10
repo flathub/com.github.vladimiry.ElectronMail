@@ -11,9 +11,15 @@ build-commands:
   - install -Dm644 -t /app/share/metainfo ${FLATPAK_ID}.metainfo.xml
 sources:
   - type: file
+    only-arches: ["x86_64"]
     dest-filename: electron-mail.deb
     url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.5/electron-mail-5.3.5-linux-amd64.deb
     sha256: e9219aaa48c2c671cefe037bc44c2e15628cbb6d603f299487ac8d636ef3e3a8
+  - type: file
+    only-arches: ["aarch64"]
+    dest-filename: electron-mail.deb
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.5/electron-mail-5.3.5-linux-arm64.deb
+    sha256: 332ffeb638db0fbfc7215eaa9aad748cac3cc284fd942ddc64d2bd50c659a8d5    
   - type: script
     dest-filename: electron-mail-entrypoint.sh
     commands:
