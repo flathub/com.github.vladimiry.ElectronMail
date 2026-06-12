@@ -13,13 +13,13 @@ sources:
   - type: file
     only-arches: ["x86_64"]
     dest-filename: electron-mail.deb
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.6/electron-mail-5.3.6-linux-amd64.deb
-    sha256: 08f97717a2ce8d6424e9f2278624e12f8a639e290cd90a45ce4142893e8ec3c5
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.7/electron-mail-5.3.7-linux-amd64.deb
+    sha256: c29c0e0a7cf46387eb0d0cd0366f80513df4814ca9511739b797d460a474612c
   - type: file
     only-arches: ["aarch64"]
     dest-filename: electron-mail.deb
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.6/electron-mail-5.3.6-linux-arm64.deb
-    sha256: 7db6e1532772b876e4ffe925dd3fdb9139b653e1a938802c7d3051d7c1e7feb5    
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.7/electron-mail-5.3.7-linux-arm64.deb
+    sha256: 9b45f497fd9bc3d3ef17a0db5cee4d9bd263a4923e4b11aa836c7ccacd841e60
   - type: script
     dest-filename: electron-mail-entrypoint.sh
     commands:
