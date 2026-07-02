@@ -1,0 +1,18 @@
+--- ./ElectronMail/electron-mail-launcher
++++ ./ElectronMail/electron-mail-launcher
+@@ -1,2 +1,3 @@
+ #!/bin/sh
+-exec '/opt/ElectronMail/electron-mail' '--js-flags="--max-old-space-size=12288"' "$@"
++export TMPDIR="${XDG_RUNTIME_DIR}/app/${FLATPAK_ID}"
++exec zypak-wrapper '/app/ElectronMail/electron-mail' '--js-flags="--max-old-space-size=12288"' "$@"
+
+--- ./share/applications/electron-mail.desktop
++++ ./share/applications/electron-mail.desktop
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Name=ElectronMail
+-Exec=/opt/ElectronMail/electron-mail-launcher %U
++Exec=electron-mail %U
+ Terminal=false
+ Type=Application
+ Icon=electron-mail
