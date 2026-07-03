@@ -29,4 +29,11 @@ finish-args:
   - --socket=cups
   - --system-talk-name=org.freedesktop.Avahi
 modules:
-  - module-electron-mail.yaml
+  - name: metainfo
+    buildsystem: simple
+    build-commands:
+      - install -D --mode=0644 --target-directory="${FLATPAK_DEST}/share/metainfo" ${FLATPAK_ID}.metainfo.xml
+    sources:
+      - type: file
+        path: com.github.vladimiry.ElectronMail.metainfo.xml
+  - modules/app/manifest.yaml

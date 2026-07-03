@@ -1,0 +1,23 @@
+name: app
+buildsystem: simple
+build-commands:
+  - |
+    bsdtar --extract --to-stdout --file electron-mail.deb data.tar.xz | \
+      bsdtar --extract --xz --file - --directory "${FLATPAK_DEST}" --strip-components=2 ./opt ./usr
+  - rm --recursive --force "${FLATPAK_DEST}/share/icons/hicolor/1024x1024/"
+  - chmod -R a-s,go+rX,go-w "${FLATPAK_DEST}/ElectronMail/"
+  - patch --directory="${FLATPAK_DEST}" --strip=0 --forward --reject-file=- --input="${FLATPAK_BUILDER_BUILDDIR}/deb-content.patch"
+  - mv "${FLATPAK_DEST}/ElectronMail/electron-mail-launcher" "${FLATPAK_DEST}/bin/electron-mail"
+sources:
+  - type: file
+    only-arches: ["x86_64"]
+    dest-filename: electron-mail.deb
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.8/electron-mail-5.3.8-linux-amd64.deb
+    sha256: 5b3db21ac7e655986ac10da9eed04dc7594a3eb37909e7a36cb635af670f939e
+  - type: file
+    only-arches: ["aarch64"]
+    dest-filename: electron-mail.deb
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.8/electron-mail-5.3.8-linux-arm64.deb
+    sha256: 1b5d491522412853c5aed444ad5cdd5807eb342cb2913aea2efeac58fc7fcbc3
+  - type: file
+    path: deb-content.patch
