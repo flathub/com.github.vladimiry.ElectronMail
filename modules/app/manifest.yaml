@@ -12,12 +12,12 @@ sources:
   - type: file
     only-arches: ["x86_64"]
     dest-filename: electron-mail.deb
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.9/electron-mail-5.3.9-linux-amd64.deb
-    sha256: 900d5f4b811fbf4d906cc436e94b88af876eff6282351c4e3016c073c132e3a7
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.10/electron-mail-5.3.10-linux-amd64.deb
+    sha256: c27abeec0ab770acba7e93e2edc0a65a7052fddde787192a66e3c7ec2e16c4e6
   - type: file
     only-arches: ["aarch64"]
     dest-filename: electron-mail.deb
-    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.9/electron-mail-5.3.9-linux-arm64.deb
-    sha256: 1bbfea83c21f0d5405cd7e144cdcd9c7b097351a8e5f6a7aa48c630609d16ebf
+    url: https://github.com/vladimiry/ElectronMail/releases/download/v5.3.10/electron-mail-5.3.10-linux-arm64.deb
+    sha256: 5745b546f96a3924861026772052edb19d2c49f2f9083786fba2eb3975943353
   - type: file
     path: deb-content.patch
